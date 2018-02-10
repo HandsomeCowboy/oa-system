@@ -35,4 +35,9 @@ public class UserServiceImpl implements UserService {
 		return userRepository.selectByExample(user);
 	}*/
 
+	@Override
+	public TUser queryUser(TUser loginUser) {
+		return userRepository.selectOne(loginUser);
+	}
+
 }

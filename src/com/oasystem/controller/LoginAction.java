@@ -11,19 +11,20 @@ import com.oasystem.services.UserService;
 public class LoginAction {
 	@Autowired
 	private UserService userService;
-	@RequestMapping("userLogin")
+	@RequestMapping("user_login")
 	public String userLogin(String username,String password) {
 		TUser loginUser = new TUser();
-		loginUser.setUsername(username);
-		loginUser.setPassword(password);
+		loginUser.setcUsername(username);
+		loginUser.setcPassword(password); 
  		TUser queryUser = userService.queryUser(loginUser);
 		System.out.println(queryUser);
-		if(null != queryUser && "".equalsIgnoreCase(queryUser.getUsername())) {
+		if(null != queryUser && !"".equalsIgnoreCase(queryUser.getcUsername())) {
 			System.out.println(123232323);
 			System.out.println(123);
-			return "home";
+			return "redirect:/index.html";
 		}else {
-			return "login";
+			System.out.println("µÇÂ¼Ò³Ãæ");
+			return "redirect:/login.html";
 		}
 	}
 }

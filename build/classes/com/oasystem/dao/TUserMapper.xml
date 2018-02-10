@@ -97,6 +97,9 @@
     from t_user
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectOne" parameterType="com.oasystem.pojo.TUser" resultMap="BaseResultMap">
+  	select * from t_user where c_username= #{cUsername,jdbcType=VARCHAR} and c_password = #{cPassword,jdbcType=VARCHAR}
+  </select>
    <select id="findAll" resultMap="BaseResultMap">
     select * from t_user
   </select>
