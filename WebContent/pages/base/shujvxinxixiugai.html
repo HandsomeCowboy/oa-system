@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+	<body>
+		<br  />
+		<div class="container" style="border:1px solid #ddd;">
+			<h3 class="text-center">数据信息修改申请单</h3>
+			<hr />
+			<form action="" method="" class="form-inline">
+				<!--申请科室-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请科室</label>
+						<input name="sqks" type="text" placeholder="申请科室" class="form-control" />
+					</div>
+				</div>
+				<!--申请日期-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请日期</label>
+						<input type="date" name="sqrq" placeholder="申请日期" class="form-control" />
+					</div>
+				</div>
+				<!--患者姓名-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">患者姓名</label>
+						<input type="text" name="hzxm" placeholder="患者姓名" class="form-control" />
+					</div>
+				</div>
+				<!--患者住院号-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">患者住院号</label>
+						<input type="text" name="hzzyh" placeholder="患者住院号" class="form-control" />
+					</div>
+				</div>
+				<!--在院出院-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">在院/出院</label>
+						<input type="text" name="zycy" placeholder="在院出院" class="form-control" />
+					</div>
+				</div>
+				<!--申请人-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请人</label>
+						<input type="text" name="sqr" placeholder="申请人" class="form-control" />
+					</div>
+				</div>
+				<!--申请科室意见-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请科室意见</label>
+						<input name="sqksyj" placeholder="申请科室意见" class="form-control" />
+						<input type="date" name="sqksyj_date" class="form-control" />
+					</div>
+				</div>
+				<!--主管部门意见-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">主管部门意见</label>
+						<input name="zgbmyj" placeholder="主管部门意见" class="form-control" />
+						<input type="date" name="zgbmyj_date" class="form-control" />
+					</div>
+				</div>
+				<!--修改的内容-->
+				<div class="row" id="xgnr">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">修改内容</label>
+						<input name="zgbmyj_date" type="date"  placeholder="时间" class="form-control" />
+						<br /><br />
+						<!--原内容-->
+						<textarea style="margin-left:103px;" rows="3" cols="90" name="ynr" type="text" placeholder="原内容" class="form-control"></textarea>
+						<br /><br />
+						<!--需修改内容-->
+						<textarea style="margin-left:103px;" rows="3" cols="90" name="xxgnr" type="text" placeholder="需修改内容" class="form-control"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<a style="margin-left:103px;" class="btn btn-primary" onclick="addXgnr()">新增</a>
+				</div>
+				<div class="row">
+					<input  style="margin:5px;" type="submit" name="" id="" value="提交申请" class="btn btn-primary pull-right" />
+				</div>
+			</form>
+		</div>
+		<br  />
+		<script type="text/javascript">
+			//增加基修改内容
+			var str = '<div class="form-group" style="margin:10px 0;">'+
+						'<label style="width:100px;" for="" class="control-label text-center">修改内容</label>'+
+						'<input name="zgbmyj_date" type="date"  placeholder="时间" class="form-control" />'+
+						'<br /><br />'+
+						'<textarea style="margin-left:103px;" rows="3" cols="90" name="ynr" type="text" placeholder="原内容" class="form-control"></textarea>'+
+						'<br /><br />'+
+						'<textarea style="margin-left:103px;" rows="3" cols="90" name="xxgnr" type="text" placeholder="需修改内容" class="form-control"></textarea>'+
+					  '</div>'
+			function addXgnr(){
+				$("#xgnr").append(str)
+			}
+		</script>
+	</body>
+</html>

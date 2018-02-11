@@ -1,6 +1,6 @@
 [
 		{ "id":"11", "pId":"0", "name":"文件管理"},
-		{ "id":"111", "pId":"11", "name":"文件申请",  "page":"pages/base/fileApply.html"},
+		{ "id":"111", "pId":"11", "name":"文件申请",  "page":"pages/base/applylist.html"},
 		{ "id":"112", "pId":"11", "name":"文件审批",  "page":"pages/base/fileApproved.html"},
 		{ "id":"113", "pId":"11", "name":"文件状态",  "page":"pages/base/fileState.html"}
 ]
