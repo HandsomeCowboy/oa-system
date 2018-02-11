@@ -23,7 +23,7 @@ public class UserAction {
 	@Autowired
 	private UserService userService;
 	
-	//ĞÂÌí¼ÓÒ»¸öÓÃ»§
+	//æ–°å¢ç”¨æˆ·
 	@RequestMapping("/user_save")
 	public String saveUser(TUser tuser,HttpServletRequest request, HttpServletResponse reponse){
 		String username = request.getParameter("username");
@@ -35,7 +35,7 @@ public class UserAction {
 		String station = request.getParameter("station");
 		String telephone = request.getParameter("telephone");
 		tuser.setcUsername(username);
-		//¶ÔÓÃ»§Ãû½øĞĞMD5¼ÓÃÜ
+		//MD5åŠ å¯†
 		String md5 = MD5Utils.md5(password);
 		tuser.setcPassword(md5);
 		tuser.setcAge(18);
@@ -48,7 +48,7 @@ public class UserAction {
 		tuser.setcStation(station);
 		tuser.setcSalary(salary);
 		
-		//±£´æÓÃ»§ĞÅÏ¢
+		//ä¿å­˜ç”¨æˆ·
 		userService.saveUser(tuser);
 		
 		return "redirect:pages/system/userlist.html";
@@ -69,7 +69,7 @@ public class UserAction {
 			return "customer";
 
 		} else {
-			model.addAttribute("msg", "ÓÃ»§Ãû»òÃÜÂë´íÎó£¡");
+			model.addAttribute("msg", "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			return "login";
 		}
 
@@ -77,7 +77,7 @@ public class UserAction {
 	@ResponseBody
 	@RequestMapping("/user_list")
 	public List<TUser> list(HttpServletRequest request,HttpServletResponse reponse) {
-		// µ÷ÓÃÒµÎñ²ã £¬·µ»Ø ÓÃ»§ÁĞ±í
+		//æŸ¥è¯¢æ‰€æœ‰ç”¨æˆ·
 		List<TUser> users = userService.findAll();
 		System.out.println(users);
 		return users;

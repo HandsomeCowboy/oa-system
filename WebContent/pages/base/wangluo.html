@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+	<body>
+		<br  />
+		<div class="container" style="border:1px solid #ddd;">
+			<h3 class="text-center">网络设备接入申请单</h3>
+			<hr />
+			<form action="" method="" class="form-inline">
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请科室</label>
+						<input name="sqks" type="text" placeholder="申请科室" class="form-control" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请日期</label>
+						<input  type="date" name="sqrq" placeholder="申请日期" class="form-control" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请人</label>
+						<input name="sqr" placeholder="申请人" class="form-control" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请事由</label>
+						<textarea name="sqsy" rows="5" cols="90" placeholder="申请事由" class="form-control"></textarea>
+					</div>
+				</div>
+				<!--网络类型-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">网络类型</label>
+						<label>外网</label>
+						<input name="sqksyj" type="radio" class="form-control" />
+						<label>内网</label>
+						<input name="sqksyj" type="radio" class="form-control" />
+					</div>
+				</div>
+				<!--接入设备-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">接入设备</label>
+						<input name="jrsb" placeholder="接入设备" class="form-control" />
+					</div>
+				</div>
+				<!--设备型号-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">接入设备型号</label>
+						<label>台式机</label>
+						<input name="sqksyj" type="radio" class="form-control" />
+						<label>笔记本</label>
+						<input name="sqksyj" type="radio" class="form-control" />
+						<label>其它设备</label>
+						<input name="sqksyj" type="radio" class="form-control" />
+					</div>
+				</div>
+				<!--设备接入IP地址-->
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">设备接入IP地址</label>
+						<input name="jrsb" placeholder="设备接入IP地址" class="form-control" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">申请科室意见</label>
+						<input name="sqksyj" placeholder="申请科室意见" class="form-control" />
+						<input type="date" class="form-control" name="sqksyj_date" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group" style="margin:10px 0;">
+						<label style="width:100px;" for="" class="control-label text-center">信息科意见</label>
+						<input name="zgbmyj" placeholder="信息科意见" class="form-control" />
+						<input type="date" class="form-control" name="zgbmyj_date" />
+					</div>
+				</div>
+				<div class="row">
+					<input  style="margin:5px;" type="submit" name="" id="" value="提交申请" class="btn btn-primary pull-right" />
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>
