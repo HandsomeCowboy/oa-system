@@ -13,6 +13,8 @@ public interface TUserMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(TUser record);
+   
+    TUser selectOne(TUser tuser);
 
     int insertSelective(TUser record);
 

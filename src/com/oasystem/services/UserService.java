@@ -10,6 +10,8 @@ public interface UserService {
 
 	List<TUser> findAll();
 
+	TUser queryUser(TUser loginUser);
+
 	/*List<TUser> selectByName(TUser user);*/
 
 }
