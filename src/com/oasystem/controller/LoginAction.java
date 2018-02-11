@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.oasystem.pojo.TUser;
 import com.oasystem.services.UserService;
+import com.oasystem.util.MD5Utils;
 
 @Controller
 public class LoginAction {
@@ -14,7 +15,7 @@ public class LoginAction {
 	@RequestMapping("user_login")
 	public String userLogin(String username,String password) {
 		TUser loginUser = new TUser();
-		loginUser.setcUsername(username);
+		loginUser.setcUsername(MD5Utils.md5(username));
 		loginUser.setcPassword(password); 
  		TUser queryUser = userService.queryUser(loginUser);
 		System.out.println(queryUser);
